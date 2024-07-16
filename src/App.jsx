@@ -32,11 +32,11 @@ function App() {
   return (
     <>
       <Title nombre="Counter" />
-      <CButton content="decrement" click={decrement}/>
+      <CButton content="decrement" click={decrement} clase="button-danger"/>
       <div>{initValue}</div>
-      <CButton content="increment" click={increment}/>
-
-      <CButton content="reset" click={reset}/>
+      <CButton content="increment" click={increment} clase="button-success"/>
+      <div></div>
+      <CButton content="reset" click={reset} clase="button-reset"/>
     </>
   )
 }

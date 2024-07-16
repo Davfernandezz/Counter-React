@@ -1,0 +1,17 @@
+button{
+    background-color: grey;
+    border: none;
+    color: white;
+}
+
+.button-success{
+    background-color: green;
+}
+
+.button-danger{
+    background-color: tomato;
+}
+
+.button-reset{
+    background-color: rgb(57, 166, 57);
+}
