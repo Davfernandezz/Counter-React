@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Title } from '../components/Title/Title'
 import { CButton } from '../components/CButton/CButton'
 
-export const Counter = ({ initialState=0 }) => {
+export const Counter = ({ initialState = 0 }) => {
     //Declaracion de variables, funciones y codigo js
     const title = "Counter"
 
@@ -27,10 +27,24 @@ export const Counter = ({ initialState=0 }) => {
     function reset() {
         setInitValue(0)
     }
+    
+    function handleChange(e){
+        console.log('handle Change');
+        console.log(e.target.name);
+        console.log(e.target.value);
+        const newValue = parseInt(e.target.value)
+
+        setInitValue(newValue)
+    }
 
     return (
         <>
             <Title nombre="Counter" />
+
+            <div>
+                <input type="text" name="newContValue" id="" onChange={handleChange}/>
+            </div>
+
             <CButton content="decrement" click={decrement} clase="button-danger" />
             <div>{initValue}</div>
             <CButton content="increment" click={increment} clase="button-success" />
